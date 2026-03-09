@@ -5,17 +5,24 @@
 ```bash
 cd /Users/sent/FetusVedio
 ./scripts/setup_conda_env.sh
-conda activate fetus_video_demo_py310
-cd backend
-uvicorn app.main:app --reload --port 8000
+./scripts/run_backend.sh
 ```
 
 健康检查：`GET http://127.0.0.1:8000/api/v1/health`
+
+可选参数（通过环境变量）：
+1. `CONDA_ENV_NAME`（默认 `fetus_video_demo_py310`）
+2. `BACKEND_HOST`（默认 `0.0.0.0`）
+3. `BACKEND_PORT`（默认 `8000`）
+4. `BACKEND_RELOAD`（默认 `0`）
 
 ## 环境说明
 1. Python 环境统一由 Miniconda 管理。
 2. Python 版本固定为 `3.10.x`。
 3. 依赖定义文件为 [environment.yml](/Users/sent/FetusVedio/backend/environment.yml)。
+4. Ubuntu 部署/联调/验收文档见：
+   - [/Users/sent/FetusVedio/docs/06-部署联调与Demo验收.md](/Users/sent/FetusVedio/docs/06-部署联调与Demo验收.md)
+   - [/Users/sent/FetusVedio/docs/06-Mock迁移到真实模型说明.md](/Users/sent/FetusVedio/docs/06-Mock迁移到真实模型说明.md)
 
 ## 实时流接口（02阶段）
 1. WebSocket 推流：`ws://127.0.0.1:8000/ws/stream`
