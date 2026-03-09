@@ -3,7 +3,7 @@
     <header class="panel-head">
       <p class="panel-tag">用户认证</p>
       <h2>登录系统</h2>
-      <p class="panel-desc">未登录或登录失败时，无法访问患者录入、实时测量和历史查询功能。</p>
+      <p class="panel-desc"></p>
     </header>
 
     <form class="form-grid" @submit.prevent="handleLogin">

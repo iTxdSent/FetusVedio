@@ -2,7 +2,7 @@
   <div class="app-shell">
     <header class="app-header">
       <div class="brand-block">
-        <p class="brand-kicker">医学辅助分析 Demo</p>
+        <p class="brand-kicker"></p>
         <h1>胎儿超声视频流实时解译系统</h1>
       </div>
       <div class="header-actions">
